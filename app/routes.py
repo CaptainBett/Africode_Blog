@@ -11,7 +11,8 @@ from PIL import Image
 
 @app.route("/")   
 def home():
-    posts =Post.query.all()
+    page = request.args.get('page',1,type=int)
+    posts = Post.query.order_by(Post.date_posted.desc()).paginate(per_page=5,page=page)
     return render_template("home.html",posts=posts)
 
 
@@ -67,7 +68,7 @@ def save_picture(form_picture):
     i.thumbnail(output_size)
     i.save(picture_path)
 
-     # form_picture.save(picture_path)   HII NDIO BEN ALIKUWA AMESAHAU B4 AEKE HIZI HAPA CHINI!!!
+    # form_picture.save(picture_path)   #HII NDIO BEN ALIKUWA AMESAHAU B4 AEKE HIZI HAPA CHINI!!!
     
     return picture_fn
 
@@ -141,3 +142,10 @@ def delete_post(post_id):
     db.session.commit()
     flash ("Your post has been deleted successfully", "success")
     return redirect(url_for("home"))
+
+@app.route("/user/<string:username>")   
+def user_post(username):
+    page = request.args.get('page',1,type=int)
+    user = User.query.filter_by(username=username).first_or_404()
+    posts = Post.query.filter_by(author=user).order_by(Post.date_posted.desc()).paginate(per_page=5,page=page)
+    return render_template("user_post.html",posts=posts,user=user)
