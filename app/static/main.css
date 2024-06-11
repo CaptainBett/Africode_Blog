@@ -1,80 +1,184 @@
 body {
-    background: #fafafa;
-    color: #333333;
-    margin-top: 5rem;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    color: #444444;
-  }
-  
-  .bg-steel {
-    background-color: #5f788a;
-  }
-  
-  .site-header .navbar-nav .nav-link {
-    color: #cbd5db;
-  }
-  
-  .site-header .navbar-nav .nav-link:hover {
-    color: #ffffff;
-  }
-  
-  .site-header .navbar-nav .nav-link.active {
-    font-weight: 500;
-  }
-  
-  .content-section {
-    background: #ffffff;
-    padding: 10px 20px;
-    border: 1px solid #dddddd;
-    border-radius: 3px;
-    margin-bottom: 20px;
-  }
-  
-  .article-title {
-    color: #444444;
-  }
-  
-  a.article-title:hover {
-    color: #428bca;
-    text-decoration: none;
-  }
-  
-  .article-content {
-    white-space: pre-line;
-  }
-  
-  .article-img {
-    height: 65px;
-    width: 65px;
-    margin-right: 16px;
-  }
-  
-  .article-metadata {
-    padding-bottom: 1px;
-    margin-bottom: 4px;
-    border-bottom: 1px solid #e3e3e3
-  }
-  
-  .article-metadata a:hover {
-    color: #333;
-    text-decoration: none;
-  }
-  
-  .article-svg {
-    width: 25px;
-    height: 25px;
-    vertical-align: middle;
-  }
-  
-  .account-img {
-    height: 125px;
-    width: 125px;
-    margin-right: 20px;
-    margin-bottom: 16px;
-  }
-  
-  .account-heading {
-    font-size: 2.5rem;
-  }
+  background: #0a9ee2;
+  color: #333333;
+  margin-top: 5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #444444;
+}
+
+.bg-steel {
+  background-color: #5f788a;
+}
+
+.site-header .navbar-nav .nav-link {
+  color: #cbd5db;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.article-title {
+  color: #444444;
+}
+
+a.article-title:hover {
+  color: #428bca;
+  text-decoration: none;
+}
+
+.article-content {
+  white-space: pre-line;
+}
+
+.article-img {
+  height: 65px;
+  width: 65px;
+  margin-right: 16px;
+}
+
+.article-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.article-metadata a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.article-svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+}
+
+/* 60-30-10 Rule */
+body {
+  background-color: #9ec7da79; /* 60% */
+  color: #333; /* 30% */
+}
+.bg-primary {
+  background-color: #146bc9 !important; /* 10% */
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+  color: #fff !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffcc00 !important;
+  transition: color 0.3s;
+}
+
+/* Sidebar Styles */
+.content-section {
+  margin-top: 20px;
+}
+
+.card-header {
+  background-color: #83ceca !important; /* 10% */
+}
+
+.card-body {
+  background-color: #fff; /* 30% */
+  color: #333; /* Ensuring the text color is consistent */
+}
+
+.sidebar {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 70px; /* Adjust this value based on your navbar height */
+  background-color: #007bff; /* 10% */
+  color: #110e0e;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.sidebar .list-group-item {
+  color: #111010; /* Maintain the text color */
+}
+
+.sidebar .list-group-item:hover {
+  background-color: #58b8c9; /* Darker shade of blue for hover effect */
+  transition: background-color 0.3s;
+}
+
+.fa-instagram {
+  font-size: 1.5em;
+}
+
+.fa-instagram:hover {
+  font-size: 2em;
+  transition: font-size 0.3s;
+}
+
+.site-header {
+  margin-bottom: 20px;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+footer a {
+  color: #ffc107;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.social-media-icons a {
+  color: #ffc107;
+  font-size: 1.2em;
+  transition: transform 0.3s;
+}
+
+.social-media-icons a:hover {
+  color: #fff;
+  transform: scale(1.5);
+}
+
+.social-media-icons {
+  display: inline;
+}
